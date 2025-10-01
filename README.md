@@ -45,6 +45,8 @@ Cognitive Analysis Workflow:
 
 ✍️ Escalate (Tool 3): After gathering and correlating all evidence, the agent writes a formal "Incident Report" in Markdown and saves it to a file, escalating the threat for a human analyst to review.
 
+👉[Watch Working Demo Video of the Project ](https://drive.google.com/file/d/1T-BWjD8ZBLBGO6xhL6ycH3fTd39ZyPxa/view?usp=sharing)👈
+
 ## 🚀 How It Works: The Agentic Architecture
 This project is a true demonstration of Agentic AI principles. It's more than a script; it's a cognitive system.
 
@@ -91,7 +93,7 @@ Installation & Setup
 Clone the repository:
 
 ### 1. git clone [https://github.com/Shaik-h-Umar/Multi-AI-Agent.git](https://github.com/Shaik-h-Umar/Multi-AI-Agent.git) 
-         cd hackomatic-agent
+         cd 'your path'
 
 
   2. Create and activate a virtual environment:
