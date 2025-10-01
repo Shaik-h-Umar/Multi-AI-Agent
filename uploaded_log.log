@@ -1,0 +1,63 @@
+**Title: Suspicious Login Attempt Detector**
+
+## **1. Objective**
+
+The objective of this project is to develop a **Suspicious Login Attempt Detector**, an Intrusion Detection System (IDS) designed to monitor and analyze authentication logs for unusual login attempts. The system aims to detect and alert users when repeated failed login attempts occur from the same IP address, indicating a possible brute force attack or unauthorized access attempt.
+
+This project will:
+- Monitor system authentication logs.
+- Identify multiple failed login attempts from the same source.
+- Generate alerts when suspicious login attempts exceed a predefined threshold.
+- Optionally integrate with a firewall to block malicious IPs.
+
+By implementing this system, organizations or individuals can enhance security by detecting and responding to potential intrusion attempts in real time.
+
+---
+
+## **2. Tools & Technologies**
+
+This project will utilize the following tools and technologies:
+
+### **Programming Language:**
+- **Python** – Used for scripting, log analysis, and alert generation.
+
+### **Libraries & Modules:**
+- **re (Regular Expressions)** – To extract IP addresses from log files.
+- **collections (defaultdict)** – To count failed login attempts per IP.
+- **pandas** (optional) – For advanced data analysis and visualization.
+- **logging** – To store detected suspicious login attempts.
+- **email/smtplib** (optional) – To send alerts via email.
+
+### **Log Files & Data Sources:**
+- **Linux:** `/var/log/auth.log` (Authentication logs)
+- **Windows:** Event Viewer Logs (`Security` category via `wmi` or `pywin32`)
+
+### **Additional Security Measures (Future Enhancements):**
+- **Firewall Integration** – Blocking flagged IPs using `iptables` (Linux) or Windows Firewall rules.
+- **Machine Learning (Optional)** – Implement anomaly detection using ML models to improve accuracy.
+
+---
+
+## **3. About the Project**
+
+### **Overview:**
+The Suspicious Login Attempt Detector is a lightweight Intrusion Detection System (IDS) that helps identify unauthorized access attempts based on authentication logs. The system continuously monitors failed login attempts and determines whether an IP address is attempting a brute force attack. When the number of failed login attempts from a single IP exceeds a predefined threshold (e.g., 5 failed attempts in 10 minutes), the system logs the event and raises an alert.
+
+### **How It Works:**
+1. **Read System Logs** – The script scans authentication logs to extract failed login attempts.
+2. **Extract IP Addresses** – Using regular expressions, the system identifies and tracks IPs linked to failed attempts.
+3. **Analyze Suspicious Activity** – The system counts failed attempts from each IP.
+4. **Trigger Alerts** – If an IP exceeds the threshold, it is flagged, logged, and optionally blocked.
+
+### **Use Cases:**
+- **Personal Computer Security:** Monitor unauthorized login attempts.
+- **Enterprise Network Security:** Detect brute force attempts on company servers.
+- **Cloud Server Protection:** Prevent unauthorized access to cloud-based applications.
+
+### **Expected Outcome:**
+By the end of the project, the system will be able to **identify suspicious login attempts**, **log suspicious IPs**, and **send alerts** to system administrators, helping prevent unauthorized access and brute force attacks.
+
+---
+
+This project serves as a foundational step toward a more robust IDS system and can be expanded with additional features like **real-time monitoring, IP blocking, and machine learning-based anomaly detection**.
+
